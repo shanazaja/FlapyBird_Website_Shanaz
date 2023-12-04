@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="flappybird.css">
+    <script src="flappybird.js"></script>
+</head>
+<body>
+
+<!-- Halaman Start -->
+<div id="start-page">
+    <h2>Welcome to Flappy Bird</h2>
+    <button onclick="startGame()">Start</button>
+</div>
+
+<!-- Halaman Game -->
+<div id="game-page" style="display: none;">
+    <canvas id="board"></canvas>
+</div>
+
+<script>
+    let startPage = document.getElementById("start-page");
+    let gamePage = document.getElementById("game-page");
+
+    function showStartPage() {
+        startPage.style.display = "block";
+        gamePage.style.display = "none";
+    }
+
+    function startGame() {
+        startPage.style.display = "none";
+        gamePage.style.display = "block";
+        initializeGame();
+    }
+
+    function initializeGame() {
+        // Your game initialization code goes here
+
+        // For now, let's call the existing function to start the game
+        showLoginPage();
+    }
+
+    // Call the function to show the start page when the page loads
+    showStartPage();
+</script>
+
+</body>
+</html>
